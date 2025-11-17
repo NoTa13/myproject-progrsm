@@ -2,13 +2,15 @@
 
 .header {
     height: 80px;
-    background: #2c2d2f;
+    background: rgba(15, 12, 41, 0.8);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 2;
+    border-bottom: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .inner_header {
@@ -27,11 +29,18 @@
     font-size: 22px;
     height: 60px;
     width: fit-content;
-    background: var(--orange);
+    background: linear-gradient(135deg, #ff006e, #8338ec);
     padding: 8px;
     color: white;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 0, 110, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logotype:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 0, 110, 0.5);
 }
 
 /* HEADER MENU */
@@ -43,19 +52,25 @@
 }
 
 .menu_link a {
-    color: var(--orange);
+    color: #3a86ff;
     text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .menu_link a:hover {
-    text-decoration: underline;
+    color: #ff006e;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
 }
 
 /* MAIN BLOCK */
 
 .main_block {
     padding: 100px 0;
-    background: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
+    margin-top: 80px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 /* BUTTONS COLOR PICKER */
@@ -68,14 +83,25 @@
 
 .btn-color {
     border-radius: 20px;
-    border-color: white !important;
+    border: 2px solid #3a86ff !important;
+    background: rgba(58, 134, 255, 0.1) !important;
+    color: #3a86ff !important;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px) !important;
+}
+
+.btn-color:hover {
+    background: rgba(58, 134, 255, 0.25) !important;
+    box-shadow: 0 0 20px rgba(58, 134, 255, 0.5) !important;
 }
 
 /* FOOTER */
 
 .footer {
-    background: #2c2d2f;
+    background: rgba(15, 12, 41, 0.9);
+    backdrop-filter: blur(10px);
     width: 100%;
+    border-top: 2px solid rgba(255, 0, 110, 0.2);
 }
 
 .inner_footer {
@@ -87,7 +113,10 @@
 
 .footer h2 {
     text-transform: uppercase;
-    color: var(--orange);
+    background: linear-gradient(90deg, #ff006e, #8338ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: 600;
 }
 
@@ -96,7 +125,9 @@
 
 .slider_block {
     padding: 100px 0;
-    background: black;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);
 }
 
 .slider {
@@ -104,12 +135,14 @@
     width: 100%;
     height: 300px;
     overflow: hidden;
-    border: 3px solid var(--orange);
+    border: 2px solid #3a86ff;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 .slide {
@@ -142,8 +175,14 @@
 }
 
 .slide_card a {
-    color: var(--orange);
+    color: #ff006e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.slide_card a:hover {
     text-decoration: underline;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
 }
 
 .slide.active_slide {
@@ -153,8 +192,10 @@
 /* VIDEO BLOCK */
 
 .block_video {
-    background: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 .inner_block_video {
@@ -185,11 +226,12 @@
     position: relative;
     width: 100%;
     padding: 40px;
-    background-color: black;
-    border: 2px solid var(--orange);
-    border-radius: 4px;
+    background: linear-gradient(135deg, #0f0c29, #302b63);
+    border: 2px solid #ff006e;
+    border-radius: 20px;
     max-height: 80vh;
     overflow-y: auto;
+    backdrop-filter: blur(10px);
 }
 
 .modal_content form {
@@ -227,8 +269,10 @@
 /*-------BOTTLE-------*/
 
 .botlle {
-    background: black;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);
 }
 
 .bottle_inner {

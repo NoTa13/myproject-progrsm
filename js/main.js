@@ -2,6 +2,7 @@
 
 const buttonsColor = document.querySelectorAll('.btn-color')
 const javaScript = document.querySelector('#js-color')
+const pageBody = document.body
 
 const generateRandomColor = () => {
     const hexCodes = '0123456789ABCDEF'
@@ -14,10 +15,15 @@ const generateRandomColor = () => {
 
 const setRandomColors = () => {
     buttonsColor.forEach((buttonColor) => {
-        buttonColor.innerHTML = generateRandomColor()
-        buttonColor.onclick = (event) => {
-            javaScript.style.color = event.target.innerHTML
-        }
+            const colorHex = generateRandomColor()
+            buttonColor.innerHTML = colorHex
+            buttonColor.style.color = colorHex
+            buttonColor.style.borderColor = colorHex
+            // when clicked, change the color of the "JavaScript" text
+            buttonColor.onclick = (event) => {
+                const color = event.target.innerHTML.trim()
+                javaScript.style.color = color
+            }
     })
 }
 
@@ -75,3 +81,24 @@ prev.onclick = () => {
 }
 
 autoSlider(index)
+
+// MODAL WINDOW TRIGGER
+const btnGet = document.getElementById('btn-get')
+const modal = document.querySelector('.modal')
+const modalClose = document.querySelector('.modal_close')
+
+if (btnGet && modal) {
+    btnGet.addEventListener('click', () => {
+        modal.style.display = 'block'
+    })
+
+    modalClose.addEventListener('click', () => {
+        modal.style.display = 'none'
+    })
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none'
+        }
+    })
+}

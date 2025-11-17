@@ -1,0 +1,403 @@
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 165, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+/* ABOUT HERO SECTION */
+.about_hero {
+    padding: 100px 0;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
+}
+
+.inner_about_hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about_content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+
+.about_content h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.about_content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* SKILLS SECTION */
+.skills_section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);
+}
+
+.skills_section h2 {
+    margin-bottom: 60px;
+    font-size: 50px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.inner_skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill_card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #ff006e;
+    animation: scaleIn 0.6s ease-out both;
+    transition: all 0.3s ease;
+}
+
+.skill_card:nth-child(1) { animation-delay: 0.1s; }
+.skill_card:nth-child(2) { animation-delay: 0.2s; }
+.skill_card:nth-child(3) { animation-delay: 0.3s; }
+.skill_card:nth-child(4) { animation-delay: 0.4s; }
+
+.skill_card:hover {
+    transform: translateY(-10px) rotateX(6deg) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    /* removed continuous glow; now a subtle tilt/flip on hover */
+}
+
+.skill_card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.skill_bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skill_progress {
+    height: 100%;
+    background: linear-gradient(90deg, #ff006e, #8338ec);
+    border-radius: 5px;
+    /* use scaleX to animate revealing the bar without changing inline width values */
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(.2,.9,.2,1);
+}
+
+.skill_card:hover .skill_progress {
+    transform: scaleX(1);
+}
+
+.skill_percent {
+    color: #ff006e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* EXPERIENCE SECTION */
+.experience_section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
+}
+
+.experience_section h2 {
+    margin-bottom: 60px;
+    font-size: 50px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.inner_experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.experience_item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #3a86ff;
+    animation: slideInLeft 0.6s ease-out both;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.experience_item:nth-child(1) { animation-delay: 0.2s; }
+.experience_item:nth-child(2) { animation-delay: 0.4s; }
+
+.experience_item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #3a86ff, transparent);
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience_item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.2);
+}
+
+.experience_item:hover::before {
+    opacity: 1;
+}
+
+.experience_item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.experience_item .company {
+    color: #ff006e;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.experience_item .date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.experience_item .description {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* CONTACT SECTION */
+.contact_section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);\n}
+
+.contact_section h2 {
+    margin-bottom: 60px;
+    font-size: 50px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.inner_contact {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact_form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #ff006e;
+    animation: fadeInUp 0.8s ease-out;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.contact_form:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 110, 0.3);
+    transform: translateY(-5px);
+}
+
+.form_group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    animation: slideInRight 0.6s ease-out both;
+}
+
+.form_group:nth-child(1) { animation-delay: 0.2s; }
+.form_group:nth-child(2) { animation-delay: 0.4s; }
+.form_group:nth-child(3) { animation-delay: 0.6s; }
+
+.form_group label {
+    color: #ff006e;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff006e;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 10px;
+    font-family: "Britannic Bold", sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+    border-color: #3a86ff;
+    box-shadow: 0 0 15px rgba(58, 134, 255, 0.3);
+}
+
+.form_group input::placeholder,
+.form_group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact_form button {
+    width: 100%;
+    margin-top: 20px;
+    animation: slideInRight 0.6s ease-out 0.8s both;
+    transition: all 0.3s ease;
+}
+
+.contact_form button:hover {
+    animation: pulse 0.6s ease-in-out infinite;
+}
+
+.form_message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+    animation: scaleIn 0.4s ease-out;
+}
+
+.form_message.success {
+    background: rgba(76, 175, 80, 0.3);
+    color: #4CAF50;
+    display: block;
+}
+
+.form_message.error {
+    background: rgba(244, 67, 54, 0.3);
+    color: #f44336;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about_content h1 {
+        font-size: 50px;
+    }
+
+    .skills_section h2,
+    .experience_section h2,
+    .contact_section h2 {
+        font-size: 35px;
+    }
+
+    .skill_card,
+    .experience_item {
+        padding: 20px;
+    }
+}

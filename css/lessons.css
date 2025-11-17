@@ -2,18 +2,22 @@
 /* PHONE CHECKER */
 
 .phone_block {
-    background: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 .inner_phone_block {
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid var(--orange);
+    border: 2px solid #3a86ff;
     height: 300px;
     border-radius: 20px;
     align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 .form_phone {
@@ -30,21 +34,25 @@
 /* TAB SLIDER */
 
 .tab_slider {
-    background: black;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);
 }
 
 .tab_content_block {
     width: 700px;
-    border: 1px solid var(--orange);
+    border: 2px solid #ff006e;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 170px;
+    background: rgba(255, 0, 110, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 .tab_content_block p {
@@ -63,20 +71,26 @@
 .tab_content_item {
     padding: 10px;
     height: 30px;
-    color: white;
-    border: 1px solid var(--orange);
+    color: #3a86ff;
+    border: 1px solid #3a86ff;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
     display: grid;
     place-content: center;
+    background: rgba(58, 134, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tab_content_item:hover {
+    background: rgba(58, 134, 255, 0.2);
 }
 
 .tab_content_item_active {
-    background: var(--orange);
-    color: black;
+    background: linear-gradient(135deg, #3a86ff, #8338ec);
+    color: white;
     font-weight: 600;
-    border: 1px solid white;
+    border: 2px solid #ff006e;
 }
 
 .tab_contents_block {
@@ -89,24 +103,35 @@
 /*------CARD SWITCHER------*/
 
 .card_switcher {
-    background-color: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 .card {
     width: 500px;
     height: 150px;
-    border: 1px solid var(--orange);
+    border: 2px solid #ff006e;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    background: rgba(255, 0, 110, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: rgba(255, 0, 110, 0.1);
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
 }
 
 .card p {
-    color: var(--orange);
+    color: #ff006e;
     font-size: 20px;
 }
 
@@ -128,7 +153,9 @@
 
 .converter {
     padding: 100px 0;
-    background-color: black;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);
 }
 
 .inner_converter {
@@ -149,7 +176,9 @@
 
 .weather {
     padding: 100px 0;
-    background-color: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 .inner_weather > div {
@@ -159,6 +188,32 @@
     gap: 10px;
     color: white;
     font-size: 25px;
+}
+
+.weather_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(58, 134, 255, 0.05);
+    border-radius: 15px;
+    border: 2px solid #3a86ff;
+    min-height: 100px;
+    justify-content: center;
+}
+
+.weather_info .city {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff006e;
+}
+
+.weather_info .temp {
+    font-size: 20px;
+    color: #3a86ff;
+    text-align: center;
+    line-height: 1.6;
 }
 
 .inner_weather {

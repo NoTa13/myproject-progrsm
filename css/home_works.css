@@ -2,18 +2,22 @@
 /* GMAIL BLOCK */
 
 .gmail_block {
-    background: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 .inner_gmail_block {
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid var(--orange);
+    border: 2px solid #3a86ff;
     height: 300px;
     border-radius: 20px;
     align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 .form_gmail {
@@ -30,23 +34,29 @@
 /* MOVE BLOCK */
 
 .move_block {
-    background: black;
+    background: linear-gradient(180deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
     padding: 100px 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 134, 255, 0.2);
 }
 
 .parent_block {
     height: 500px;
     width: 500px;
-    border: 1px solid var(--orange);
+    border: 2px solid #ff006e;
     position: relative;
     margin: 0 auto;
+    background: rgba(255, 0, 110, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .inner_parent_block {
     height: 400px;
     width: 400px;
-    border: 1px solid var(--orange);
+    border: 2px solid #3a86ff;
     border-radius: 18px;
+    background: rgba(58, 134, 255, 0.05);
 }
 
 .child_block {
@@ -172,7 +182,7 @@
     font-size: 80px;
     height: 100px;
     width: 100%;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 2px solid #ff006e;
     margin-top: 40px;
 }
 
@@ -184,7 +194,9 @@
 
 .stopwatch {
     padding: 100px 0;
-    background: black;
+    background: linear-gradient(180deg, rgba(131, 56, 236, 0.1), rgba(58, 134, 255, 0.1));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 0, 110, 0.2);
 }
 
 .time_buttons {

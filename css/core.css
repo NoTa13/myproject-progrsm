@@ -11,7 +11,9 @@
 
 body {
     font-family: "Britannic Bold", sans-serif;
-    background: #c2d0d0;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    min-height: 100vh;
+    color: #fff;
 }
 
 .btn {
@@ -19,19 +21,24 @@ body {
     height: 50px;
     font-size: 20px;
     cursor: pointer;
-    border: 1px solid var(--orange);
-    background: black;
-    color: var(--orange);
-    border-radius: 8px;
+    border: 2px solid #ff006e;
+    background: rgba(255, 0, 110, 0.1);
+    color: #ff006e;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
 }
 
 .btn:hover {
-    background: #414349;
+    background: rgba(255, 0, 110, 0.25);
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+    transform: translateY(-2px);
 }
 
 .btn:active {
-    background: #56585D;
-    border: 2px solid var(--orange);
+    background: rgba(255, 0, 110, 0.4);
+    transform: translateY(0);
 }
 
 a {
@@ -45,16 +52,20 @@ li {
 h1 {
     text-align: center;
     font-size: 70px;
-    color: white;
+    color: #fff;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
+    background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 h2 {
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: #fff;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -63,7 +74,7 @@ h2 {
 h3 {
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: #fff;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -71,54 +82,97 @@ h3 {
 
 h4 {
     font-size: 24px;
-    color: white;
+    color: #fff;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 strong {
-    color: #F79300;
+    color: #ff006e;
+    font-weight: 700;
 }
 
 label {
     font-size: 24px;
-    color: var(--orange);
+    color: #3a86ff;
 }
 
 input {
     width: 350px;
     height: 50px;
     font-size: 20px;
-    padding-left: 5px;
-    color: var(--orange);
-    background: black;
-    border: 2px solid var(--orange);
+    padding-left: 15px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-family: "Britannic Bold", sans-serif;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #3a86ff;
+    box-shadow: 0 0 20px rgba(58, 134, 255, 0.3);
+}
+
+textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    font-family: "Britannic Bold", sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #3a86ff;
+    box-shadow: 0 0 20px rgba(58, 134, 255, 0.3);
 }
 
 .checker {
     color: white;
     font-size: 30px;
+    font-weight: 600;
 }
 
 .btn-slide {
     display: block;
     width: 100px;
     height: 100px;
-    background: var(--orange);
-    color: black;
+    background: linear-gradient(135deg, #3a86ff, #8338ec);
+    color: white;
     font-size: 20px;
     text-transform: uppercase;
     border-radius: 50%;
     font-weight: 800;
     z-index: 1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(131, 56, 236, 0.4);
 }
 
 .btn-slide:hover {
-    background: #b68733 !important;
+    background: linear-gradient(135deg, #8338ec, #ff006e);
     cursor: pointer;
     color: white;
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 0, 110, 0.5);
 }
 
 :root {
-    --orange: orange
+    --orange: #ff006e;
+    --blue: #3a86ff;
+    --purple: #8338ec;
 }

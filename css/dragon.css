@@ -1,0 +1,33 @@
+.dragon_container {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 80px);
+	overflow: hidden;
+	background: #272727;
+}
+
+.dragon_container svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+	cursor: pointer;
+	filter: sepia(10%);
+	touch-action: none;
+}
+
+/* Скрыть футер и модальное окно на странице дракона */
+.footer {
+	display: none !important;
+}
+
+.modal {
+	display: none !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.dragon_container {
+		height: calc(100vh - 80px);
+	}
+}

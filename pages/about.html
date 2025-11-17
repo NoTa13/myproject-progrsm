@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html">
+                    <div class="logotype">
+                        <h2>Java<span>Script</span></h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Home Works</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Lessons</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/dragon.html">Dragon</a>
+                    </li>                   
+                </ul>
+                <button class="btn" id="btn-get">Click me!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="about_hero">
+        <div class="container">
+            <div class="inner_about_hero">
+                <div class="about_content">
+                    <h1>About Me</h1>
+                    <p>Привет! Я Нарсбеков Салим, студент группы IT-123. Учусь в университете МУЦА и увлекаюсь JavaScript и веб-разработкой. На этом сайте я собрал свои проекты и практические задания, которые помогают мне развивать навыки и расти в сфере программирования.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills_section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="inner_skills">
+                <div class="skill_card">
+                    <h3>HTML</h3>
+                    <div class="skill_bar">
+                        <div class="skill_progress" style="width: 85%"></div>
+                    </div>
+                    <span class="skill_percent">85%</span>
+                </div>
+                <div class="skill_card">
+                    <h3>CSS</h3>
+                    <div class="skill_bar">
+                        <div class="skill_progress" style="width: 75%"></div>
+                    </div>
+                    <span class="skill_percent">75%</span>
+                </div>
+                <div class="skill_card">
+                    <h3>JavaScript</h3>
+                    <div class="skill_bar">
+                        <div class="skill_progress" style="width: 70%"></div>
+                    </div>
+                    <span class="skill_percent">70%</span>
+                </div>
+                <div class="skill_card">
+                    <h3>React</h3>
+                    <div class="skill_bar">
+                        <div class="skill_progress" style="width: 60%"></div>
+                    </div>
+                    <span class="skill_percent">60%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience_section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="inner_experience">
+                <div class="experience_item">
+                    <h3>Junior Developer</h3>
+                    <p class="company">JavaScript Learning Center</p>
+                    <p class="date">2024 - Present</p>
+                    <p class="description">Создание проектов на JavaScript, работа с DOM, изучение асинхронного программирования</p>
+                </div>
+                <div class="experience_item">
+                    <h3>Student</h3>
+                    <p class="company">IUCA University</p>
+                    <p class="date">2023 - 2025</p>
+                    <p class="description">Изучение основ веб-разработки, HTML, CSS, JavaScript и других технологий</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact_section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="inner_contact">
+                <div class="contact_form">
+                    <form id="contactForm">
+                        <div class="form_group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                        <div id="formMessage" class="form_message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <a href="#">
+                <div class="inner_footer">
+                    <h2>Made by </h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <form action="#">
+                <div class="modal_close">&times;</div>
+                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
+                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../js/modal.js"></script>
+<script src="../js/about.js"></script>
+</html>

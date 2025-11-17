@@ -16,6 +16,53 @@ button.addEventListener('click', ()=>{
     }
 });
 
+// Проверка ИИН
+const iinInput = document.getElementById('iin_input');
+const iinButton = document.getElementById('iin_button');
+const iinResult = document.getElementById('iin_result');
+
+// ИИН формат: 12 цифр, первые 2 цифры - год, далее месяц, день, порядковый номер
+const iinRegExp = /^\d{12}$/;
+
+const validateIIN = (iin) => {
+    // Проверяем формат
+    if (!iinRegExp.test(iin)) {
+        return false;
+    }
+    
+    // Проверяем контрольную сумму
+    let weights1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    let sum1 = 0;
+    
+    for (let i = 0; i < 11; i++) {
+        sum1 += parseInt(iin[i]) * weights1[i];
+    }
+    
+    let checksum1 = sum1 % 11;
+    if (checksum1 === 10) {
+        let weights2 = [3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 2];
+        let sum2 = 0;
+        for (let i = 0; i < 11; i++) {
+            sum2 += parseInt(iin[i]) * weights2[i];
+        }
+        checksum1 = sum2 % 11;
+        if (checksum1 === 10) checksum1 = 0;
+    }
+    
+    return checksum1 === parseInt(iin[11]);
+};
+
+iinButton.addEventListener('click', () => {
+    const value = iinInput.value.trim();
+    if (validateIIN(value)) {
+        iinResult.textContent = 'ИИН верный';
+        iinResult.style.color = 'green';
+    } else {
+        iinResult.textContent = 'ИИН не верный';
+        iinResult.style.color = 'red';
+    }
+});
+
 
 //движение квадрата по квадрату
 const parentBlock = document.querySelector('.parent_block')
